@@ -1,0 +1,42 @@
+<div class="pny-store-filter">
+  <div class="pny-store-filter--btns">
+    <button mat-button>Location</button>
+    <button mat-button>Category</button>
+    <button mat-button>+More</button>
+  </div>
+  <div class="pny-store-filter--paging">
+    <div>
+      <mat-button-toggle-group #storeView="matButtonToggleGroup">
+        <mat-button-toggle value="pny-grid">
+          <mat-icon>view_module</mat-icon>
+        </mat-button-toggle>
+        <mat-button-toggle value="pny-list">
+          <mat-icon>view_list</mat-icon>
+        </mat-button-toggle>
+      </mat-button-toggle-group>
+    </div>
+    <div>
+      <mat-paginator #paginatorTop [pageSize]="20" [pageSizeOptions]="[5, 10, 25, 100]"></mat-paginator>
+    </div>
+  </div>
+</div>
+<div class="pny-store-container" [ngClass]="storeView.value">
+  <mat-card class="pny-store-container--card" *ngFor="let card of obs | async">
+    <figure class="pny-store-container--card--img">
+      <img src="assets/images/logo1.png" />
+    </figure>
+
+    <mat-card-subtitle>{{ card.subtitle }}</mat-card-subtitle>
+
+    <mat-card-content>
+      <p>{{ card.text }}</p>
+      <p class="pny-store--name">{{ card.name }}</p>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-stroked-button color="primary" class="pny-visit-btn">
+        Visit Store
+      </button>
+    </mat-card-actions>
+  </mat-card>
+</div>
+<mat-paginator [pageSize]="paginatorTop.pageSize" [pageIndex]="paginatorTop.pageIndex" [length]="paginatorTop.length" [pageSizeOptions]="paginatorTop.pageSizeOptions"></mat-paginator>

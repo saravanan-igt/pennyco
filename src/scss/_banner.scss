@@ -1,0 +1,57 @@
+.pny-banner {
+  background: linear-gradient(180deg, #f5f6ff 0%, #dedeff 100%);
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  .pny-banner--title {
+    margin-bottom: 10px;
+  }
+  .pny-banner--content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 600px;
+  }
+  .pny-banner--search {
+    background: #fff;
+    border-radius: 5px;
+    padding: 0px 5px 0px 15px;
+    min-width: 300px;
+    &.mat-form-field-appearance-legacy {
+      .mat-form-field-wrapper {
+        padding-bottom: 0;
+      }
+      .mat-form-field-underline {
+        display: none;
+      }
+      .mat-form-field-infix {
+        border-top: 0;
+        display: flex;
+        align-items: center;
+        .mat-mini-fab:not([class*="mat-elevation-z"]) {
+          box-shadow: none;
+        }
+        .mat-form-field-label {
+          top: 48%;
+        }
+        .mat-mini-fab {
+          width: 30px;
+          height: 30px;
+          .mat-button-wrapper {
+            line-height: 20px;
+            padding: 0;
+            .mat-icon {
+              font-size: 18px;
+            }
+          }
+        }
+      }
+      .mat-form-field-flex {
+        align-items: center;
+      }
+    }
+  }
+}

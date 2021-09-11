@@ -1,0 +1,93 @@
+.pny-store-container {
+  padding: 0 30px 10px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  .pny-store-container--card {
+    margin: 10px;
+    text-align: center;
+    flex: 1 0 15%;
+    transition: all 0.5s ease;
+    .pny-visit-btn {
+      &.mat-button-base {
+        width: 100%;
+        border: 1px solid #2985fa;
+        border-radius: 28px;
+        text-transform: uppercase;
+        color: #000000;
+        transition: all 0.5s ease;
+        &:hover {
+          background: #2985fa;
+          color: #fff;
+        }
+      }
+    }
+    &:hover {
+      background: #f6f6f6;
+      box-shadow: 0px 10px 20px rgba(116, 116, 116, 0.25);
+    }
+    .pny-store-container--card--img {
+      display: block;
+      background: #fff;
+      margin: -16px -16px 10px -16px;
+      padding: 10px 0 0 0;
+    }
+    .pny-store--name {
+      color: #464646;
+    }
+  }
+  &.pny-list {
+    flex-direction: column;
+    .pny-store-container--card {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      .pny-store-container--card--img {
+        margin: -16px;
+        padding: 10px;
+      }
+      .mat-card-subtitle:not(:first-child) {
+        margin-top: 0;
+        margin-bottom: 0;
+      }
+      .mat-card-content {
+        margin-bottom: 0;
+      }
+      .mat-card-actions:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+.pny-store-filter {
+  padding: 20px 30px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  .pny-store-filter--btns {
+    .mat-button {
+      text-transform: uppercase;
+      font-size: 12px;
+      font-weight: 600;
+    }
+  }
+  .pny-store-filter--paging {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    .mat-button-toggle-group {
+      .mat-button-toggle-appearance-standard {
+        border: 0;
+        .mat-button-toggle-label-content {
+          line-height: 24px !important;
+        }
+      }
+      .mat-button-toggle-checked {
+        background: transparent;
+        color: #2985fa;
+      }
+    }
+  }
+}

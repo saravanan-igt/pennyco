@@ -1,0 +1,15 @@
+/* You can add global styles to this file, and also import other style files */
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: "Advent Pro", sans-serif;
+}
+
+@import "./scss/_header.scss";
+@import "./scss/_banner.scss";
+@import "./scss/_pny_store.scss";
